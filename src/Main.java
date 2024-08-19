@@ -52,12 +52,10 @@ public class Main {
 
         System.out.println(" ");
         System.out.println("Задача 9");
-        int salary2 = 29000;
-        int amount2 = 0;
-        for (int month2 = 1; month2 <= 12; month2++) {
-            amount2 = amount2 + amount2 / 100;
-            amount2 = amount2 + salary2;
-            System.out.println("Месяц  " + month2 + ", сумма накоплений равна " + amount2 + " рублей.");
+        for (int month = 1; month <= 12; month++) {
+            amount = amount + amount/ 100;
+            amount = amount + salary;
+            System.out.println("Месяц  " + month + ", сумма накоплений равна " + amount + " рублей.");
         }
 
         System.out.println(" ");
@@ -74,7 +72,8 @@ public class Main {
         double percent1 = 1D / 100;
         int general = 0;
         int month = 0;
-        while (general < 2459000) {
+        int needSave = 2459000;
+        while (general < needSave) {
             general += savings;
             general = (int) (general * (1 + percent1));
             month++;
@@ -86,7 +85,7 @@ public class Main {
         int start = 1;
         while (start <= 10) {
             System.out.print(start + " ");
-            start = start + 1;
+            start +=1 ;
         }
         System.out.println();
         for (start = 10; start >= 1; start--) {
@@ -94,16 +93,15 @@ public class Main {
         }
 
         System.out.println(" ");
+        System.out.println(" ");
         System.out.println("Задача 3");
         int size = 12000000;
-        float birtRate = (float) 17.0 / 1000;
-        float mortalityRate = (float) 8.0 / 1000;
-        int year = 1;
-        while (year < 10) {
-            float birtRate1Year = (int) (size * birtRate);
-            float mortalityRate1Year = (int) (size * mortalityRate);
-            size = (int) (size + birtRate1Year - mortalityRate1Year);
-            year++;
+        int birtRate = 17;
+        int mortalityRate = 8;
+        int ratio = 1000;
+        int yearOne = 2025;
+        for (int year = yearOne; year < yearOne + 10; year++) {
+            size += size * birtRate / ratio - size * mortalityRate / ratio;
             System.out.println("Год " + year + ", численность населения составляет " + size);
         }
 
@@ -111,38 +109,37 @@ public class Main {
         System.out.println("Задача 4");
         int initially = 15000;
         double percent = 7D / 100;
-        int general1 = 0;
-        general1 = initially;
-        int month1 = 0;
-        while (general1 < 12000000) {
-            general1 = (int) (general1 * (1 + percent));
-            month1++;
-            System.out.println("Месяц  " + month1 + ", сумма накоплений равна " + general1 + " рублей.");
+        general = initially;
+        month = 0;
+        while (general < size) {
+            general = (int) (general * (1 + percent));
+            month++;
+            System.out.println("Месяц  " + month + ", сумма накоплений равна " + general + " рублей.");
         }
 
         System.out.println(" ");
         System.out.println("Задача 5");
-        general1 = initially;
-        month1 = 0;
-        while (general1 < 12000000) {
-            general1 = (int) (general1 * (1 + percent));
-            month1++;
-            if (month1 % 6 == 0) {
-                System.out.println("Месяц  " + month1 + ", сумма накоплений равна " + general1 + " рублей.");
+        general = initially;
+        month = 0;
+        while (general < size) {
+            general = (int) (general * (1 + percent));
+            month++;
+            if (month % 6 == 0) {
+                System.out.println("Месяц  " + month + ", сумма накоплений равна " + general + " рублей.");
             }
         }
 
         System.out.println(" ");
         System.out.println("Задача 6");
         percent = 7D / 100;
-        general1 = 0;
-        general1 = initially;
-        month1 = 0;
-        while (month1 < 12 * 9) {
-            general1 = (int) (general1 * (1 + percent));
-            month1++;
-            if (month1 % 6 == 0) {
-                System.out.println("Месяц  " + month1 + ", сумма накоплений равна " + general1 + " рублей.");
+        month =0;
+        general = initially;
+        int amountMonth = 12 * 9;
+        while (month < amountMonth) {
+            general = (int) (general * (1 + percent));
+            month++;
+            if (month % 6 == 0) {
+                System.out.println("Месяц  " + month + ", сумма накоплений равна " + general + " рублей.");
             }
         }
 
@@ -150,19 +147,18 @@ public class Main {
         System.out.println("Задача 7");
         int friday = 2;
         for (int day = friday; day <= 31; day += 7) {
-            System.out.println("Сегодя пятница , " + day + "-е число. Необходимо подготовить отчет.");
+            System.out.println("Сегодня пятница , " + day + "-е число. Необходимо подготовить отчет.");
         }
 
         System.out.println(" ");
-        System.out.println("Задача 7");
-        int cicle = 79;
-        int seen = 0;
-        int year1 = 2024;
-        int start1 = year1 - 200;
-        int start2 = year1 + 100;
-        for (int year2 = seen; year2 < start2; year2 += cicle) {
-            if (year2 > start1) {
-                System.out.println(year2);
+        System.out.println("Задача 8");
+        int repeated = 79;
+        int beginning = 0;
+        int lasts = yearOne - 200;
+        int nearests = yearOne + 100;
+        for (int year = beginning; year < nearests; year += repeated) {
+            if (year > lasts) {
+                System.out.println(year);
             }
         }
     }
