@@ -53,7 +53,7 @@ public class Main {
         System.out.println(" ");
         System.out.println("Задача 9");
         for (int month = 1; month <= 12; month++) {
-            amount = amount + amount/ 100;
+            amount = amount + amount / 100;
             amount = amount + salary;
             System.out.println("Месяц  " + month + ", сумма накоплений равна " + amount + " рублей.");
         }
@@ -85,7 +85,7 @@ public class Main {
         int start = 1;
         while (start <= 10) {
             System.out.print(start + " ");
-            start +=1 ;
+            start += 1;
         }
         System.out.println();
         for (start = 10; start >= 1; start--) {
@@ -132,7 +132,7 @@ public class Main {
         System.out.println(" ");
         System.out.println("Задача 6");
         percent = 7D / 100;
-        month =0;
+        month = 0;
         general = initially;
         int amountMonth = 12 * 9;
         while (month < amountMonth) {
