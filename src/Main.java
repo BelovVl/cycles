@@ -150,7 +150,7 @@ public class Main {
         System.out.println("Задача 7");
         int friday = 2;
         for (int day = friday; day <= 31; day += 7) {
-            System.out.println("Сегодя пятница, " + day + "-е число. Необходимо подготовить отчет.");
+            System.out.println("Сегодя пятница , " + day + "-е число. Необходимо подготовить отчет.");
         }
 
         System.out.println(" ");
